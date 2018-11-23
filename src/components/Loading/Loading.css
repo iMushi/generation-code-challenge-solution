@@ -1,0 +1,179 @@
+.loading {
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 3rem;
+}
+
+
+
+.logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.artboard {
+    width: 100%;
+  /*   height: 100%; */
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+}
+
+.domino > div {
+    border-radius: 2px;
+    display: inline-flex;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    -webkit-animation: domino-effect 2.4s infinite ease-in-out;
+    animation: domino-effect 2.4s infinite ease-in-out;
+}
+.domino > div:nth-child(1) {
+    background: #354558;
+}
+.domino > div:nth-child(1):after {
+    background: #354558;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.domino > div:nth-child(2) {
+    background: #625059;
+}
+.domino > div:nth-child(2):after {
+    background: #625059;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.domino > div:nth-child(3) {
+    background: #905b5c;
+}
+.domino > div:nth-child(3):after {
+    background: #905b5c;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.domino > div:nth-child(4) {
+    background: #bd665e;
+}
+.domino > div:nth-child(4):after {
+    background: #bd665e;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.domino > div:nth-child(5) {
+    background: #eb7260;
+}
+.domino > div:nth-child(5):after {
+    background: #eb7260;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.domino > div:nth-child(1) {
+    margin: 13px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.domino > div:nth-child(2) {
+    margin: 13px;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.domino > div:nth-child(3) {
+    margin: 13px;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.domino > div:nth-child(4) {
+    margin: 13px;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.domino > div:nth-child(5) {
+    margin: 13px;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.domino > div:after {
+    content: "";
+    position: relative;
+    top: 0px;
+    left: -30px;
+    opacity: 0;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+    -webkit-animation: illusion 2.4s infinite ease-in-out;
+    animation: illusion 2.4s infinite ease-in-out;
+}
+
+@-webkit-keyframes beat {
+    to {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
+
+@keyframes beat {
+    to {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(140deg);
+        transform: rotate(140deg);
+    }
+}
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(140deg);
+        transform: rotate(140deg);
+    }
+}
+@-webkit-keyframes domino-effect {
+    20%,100% {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+}
+@keyframes domino-effect {
+    20%,100% {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+}
+@-webkit-keyframes illusion {
+    0%, 25% {
+        opacity: 1;
+    }
+    26.10%, 33.33%, 100% {
+        opacity: 0;
+    }
+}
+@keyframes illusion {
+    0%, 25% {
+        opacity: 1;
+    }
+    26.10%, 33.33%, 100% {
+        opacity: 0;
+    }
+}

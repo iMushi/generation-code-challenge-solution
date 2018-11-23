@@ -1,0 +1,11 @@
+.mapgoogle {
+    height: 372px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 5px #ccc;
+}
+
+
+.mapcanvas {
+    background: transparent url(../../ajax-loading.gif) no-repeat center;
+}

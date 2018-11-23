@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Generation Take-Home Coding Challenge Solution
+=================================
+
 
 ## Available Scripts
 
@@ -12,33 +14,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### Solution Challenges
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Store Directory**: First challengue I encountered was get the latitute and longitude for the stores. It is imposible to load such quantity of GeoLocations via webservice at once
+* **React Rookie**: I'm such a Rookie, I know how React works, I've used for my personal demos and geek stuff, but that's it so far. Having that in mind, I did my best with it and also had a lot of fun coding my first demo with meaning.
 
-### `npm run build`
+### Solution Approach
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All the student cases have been covered, with a little twist.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* **Loading the Stores**: Instead of keep the student waiting for the whole Store Directory to load into the map or to try to get the whole directory at once, I added a secondary List of Stores, and as you scroll through it the GeoLocation service is being called in chunks of 10 stores at the time. Once the store's Lat and Lng has been loaded, no need to use the service again for that particular store.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Yes I know, none of the Student User stories has a secondary list, but nevertheless I think it is the friendliest approachwhen it comes to UX and UI
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Hope to hear form you soon.

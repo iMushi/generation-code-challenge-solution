@@ -133,7 +133,7 @@ componentWillUpdate
         this.props.markerClick(marker);
     }
 
-    
+
 
     componentDidUpdate() {
 

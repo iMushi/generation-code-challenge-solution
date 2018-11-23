@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 
 ### Solution Challenges
 
-* **Store Directory**: First challengue I encountered was get the latitute and longitude for the stores. It is imposible to load such quantity of GeoLocations via webservice at once
+* **Store Directory**: First challenge I encountered was get the latitute and longitude for the stores. It is imposible to load such quantity of GeoLocations via webservice at once
 * **React Rookie**: I'm such a Rookie, I know how React works, I've used for my personal demos and geek stuff, but that's it so far. Having that in mind, I did my best with it and also had a lot of fun coding my first demo with meaning.
 
 ### Solution Approach

@@ -11,6 +11,8 @@ const Loading = (props) => {
                 <div></div>
                 <div></div>
                 <br/>
+                Loading...
+                <br/>
                 {props.legend}
             </div>
         </div>

@@ -32,6 +32,7 @@ componentWillUpdate
     storesLocation = [];
 
     currentStoreLoading;
+    jarOfPromisesLen;
 
     updateDataForMap(listStores) {
 
@@ -77,6 +78,8 @@ componentWillUpdate
             })
         );
 
+        this.jarOfPromisesLen = jarOfPromises.length;
+
         jarOfPromises.reduce((promiseChain, currentTask, index) => {
 
             return promiseChain.then(() => {
@@ -100,12 +103,16 @@ componentWillUpdate
 
                         this.markers.push(marker);
 
-                        if(index === 9 ){
+                        if(index === this.jarOfPromisesLen - 1 ){
                             this.props.loadingItem('');
                         }
 
                     }
-                );
+                ).catch( err => {
+                    if(index === this.jarOfPromisesLen - 1 ){
+                        this.props.loadingItem('');
+                    }
+                });
             });
 
         }, Promise.resolve([])).then(() => {
@@ -126,6 +133,7 @@ componentWillUpdate
         this.props.markerClick(marker);
     }
 
+    
 
     componentDidUpdate() {
 

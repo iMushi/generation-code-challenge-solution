@@ -25,7 +25,7 @@ All the student cases have been covered, with a little twist.
 
 * **Loading the Stores**: Instead of keep the student waiting for the whole Store Directory to load into the map or to try to get the whole directory at once, I added a secondary List of Stores, and as you scroll through it the GeoLocation service is being called in chunks of 10 stores at the time. Once the store's Lat and Lng has been loaded, no need to use the service again for that particular store.
 
-Yes I know, none of the Student User stories has a secondary list, but nevertheless I think it is the friendliest approachwhen it comes to UX and UI
+Yes I know, none of the Student User stories has a secondary list, but nevertheless I think it is the friendliest approach when it comes to UX and UI
 
 
-Hope to hear form you soon.
+Hope to hear from you soon.

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Storelist.css';
 import {Row} from 'reactstrap';
 import Aux from '../../hoc/Aux';
-import Loading from '../Loading/Loading';
 
 
 const StoreList = (props) => {
@@ -18,7 +17,7 @@ const StoreList = (props) => {
                     <ul>
                         {
                             props.listStores.map(store =>
-                                <li key={store.id}><a href="#">{store.Name}</a></li>
+                                <li key={store.id}><a href="return">{store.Name}</a></li>
                             )
                         }
                     </ul>

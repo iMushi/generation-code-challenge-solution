@@ -12,18 +12,9 @@ const mapOptions = {
     }
 };
 
-const markerOptions = (googleMaps, map) => {
-    return {
-        position: Map.COORDINATES,
-        map: map,
-        title: 'Residencia Ergos',
-        animation: googleMaps.Animation.BOUNCE
-    }
-};
 
 export default class CityMap extends Component {
 
-componentWillUpdate
     markers = [];
     GeoCoder;
     MapInstance;
@@ -71,12 +62,14 @@ componentWillUpdate
                                 reject(status);
                             }
                         })
-                }, 150 * index - 50);
+                }, 150 * index);
 
                 this.timeOuts.push(timeRef);
 
             })
         );
+
+        console.log('Update Data for Map')
 
         this.jarOfPromisesLen = jarOfPromises.length;
 
@@ -145,6 +138,10 @@ componentWillUpdate
 
     }
 
+    shouldComponentUpdate(state, state2) {
+        return this.props.listStores !== state.listStores;
+    }
+
     componentDidMount() {
 
         loadGoogleMapsAPI(Map.API_CONFIG).then(googleMaps => {
@@ -169,7 +166,7 @@ componentWillUpdate
 
     render() {
 
-        console.log('Inside Render ==> ');
+        // console.log('Inside Render ==> ');
 
         return (
             <div ref="map" id="map_canvas" className={[styles.mapgoogle, styles.mapcanvas].join(' ')}></div>

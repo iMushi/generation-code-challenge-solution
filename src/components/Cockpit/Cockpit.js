@@ -15,10 +15,6 @@ class Cockpit extends Component {
         loadingLegend: ''
     }
 
-    constructor(props) {
-        super(props);
-
-    }
 
     addFavoriteClick = (favoriteId) => {
 
@@ -46,14 +42,17 @@ class Cockpit extends Component {
     }
 
     updateLoadingLegend = (legend) => {
+
         this.setState({
+
             loadingLegend: legend
         })
+
     }
 
     render() {
 
-        console.log('Cockpit Render ===>');
+        // console.log('Cockpit Render ===>');
 
         this.CityMap = this.props.listStoresToRender.length ?
             <Map
